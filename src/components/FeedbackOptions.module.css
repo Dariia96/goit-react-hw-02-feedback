@@ -1,0 +1,35 @@
+.checkboxes {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.checklabel{
+ display: block;
+  margin: 4px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid black;
+  overflow: hidden;
+  float: left;
+  float: left; line-height: 3.0em;
+  width: 8.0em; height: 3.0em;
+}
+.checklabel span{
+    text-align: center;
+  padding: 3px 0;
+  display: block;
+}
+.checkinput{
+  position: absolute;
+  display: none;
+  color: #fff !important;
+}
+
+
+
+.checklabel:active{
+    color: #ffffff;
+        text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+        background-color: rgb(62, 71, 140);
+}
