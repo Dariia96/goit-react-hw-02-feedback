@@ -2,9 +2,10 @@ import { Component } from 'react'
 import Statistics from './Statistics';
 import FeedbackOptions from './FeedbackOptions';
 import Notification from './Notification';
-let total = 0;
-let positiveFeedback = 0;
+import { object } from 'prop-types';
 
+let positiveFeedback = 0;
+let total = 0;
 class Feedback extends Component {
 	state = {
   good: 0,
@@ -12,9 +13,10 @@ class Feedback extends Component {
   bad: 0
 	}
 	
-	handleChangeGood = ( ) => {
+	handleChange = (name) => {
+		
 		this.setState((prevState) => ({
-			good: prevState.good + 1,
+			[name]: prevState[name] + 1,
 		})
 		);
 		this.countTotalFeedback();	
@@ -23,7 +25,7 @@ class Feedback extends Component {
 	}		
 	
 		
-	handleChangeNeutral = () => {
+	/*handleChangeNeutral = () => {
 
 		this.setState((prevState) => ({
 			neutral: prevState.neutral + 1,
@@ -38,10 +40,10 @@ class Feedback extends Component {
 		}))
 		this.countTotalFeedback();
 		this.countPositiveFeedbackPercentage();
-	}		
+	}	*/	
 		
 	countTotalFeedback = () => {
-	total =  this.state.good + this.state.neutral + this.state.bad;
+	 total =  1+ this.state.good + this.state.neutral + this.state.bad;
 	}	
 	
 	countPositiveFeedbackPercentage= () => {
@@ -54,28 +56,24 @@ class Feedback extends Component {
 			
 			<h2>Please leave feedback</h2>
 			<FeedbackOptions
-				good={good}
-				neutral={neutral}
-				bad={bad}
-				handleChangeGood={this.handleChangeGood}
-				handleChangeNeutral={this.handleChangeNeutral}
-				handleChangeBad={this.handleChangeBad}
+				options={Object.keys(this.state)}
+				handleChange={this.handleChange}
 			/>			
 			
 			<h2>Statistics</h2>
 			
 			
 			<Statistics
-				good =  { this.state.good}
-				neutral = { this.state.neutral} 
-				bad={this.state.bad}				
+				good =  {good}
+				neutral = {neutral} 
+				bad={bad}				
 				total = { total}
 				positiveFeedback = { positiveFeedback } 
 			/>
 			<Notification
 			good =  { this.state.good}
-				neutral = { this.state.neutral} 
-				bad={this.state.bad}	
+			neutral = { this.state.neutral} 
+			bad={this.state.bad}	
 			/>
 			</section>
 		)

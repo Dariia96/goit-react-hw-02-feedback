@@ -4,7 +4,7 @@
     gap: 20px;
 }
 
-.checklabel{
+/*.checklabel{
  display: block;
   margin: 4px;
   background-color: #ffffff;
@@ -14,22 +14,22 @@
   float: left;
   float: left; line-height: 3.0em;
   width: 8.0em; height: 3.0em;
-}
-.checklabel span{
+}*/
+/*.checklabel span{
     text-align: center;
   padding: 3px 0;
   display: block;
-}
-.checkinput{
+}*/
+/*.checkinput{
   position: absolute;
   display: none;
   color: #fff !important;
-}
+}*/
 
 
 
-.checklabel:active{
+/*.checklabel:active{
     color: #ffffff;
         text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
         background-color: rgb(62, 71, 140);
-}
+}*/
