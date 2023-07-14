@@ -2,7 +2,7 @@ import { Component } from 'react'
 import Statistics from './Statistics';
 import FeedbackOptions from './FeedbackOptions';
 import Notification from './Notification';
-import { object } from 'prop-types';
+
 
 let positiveFeedback = 0;
 let total = 0;
@@ -43,7 +43,7 @@ class Feedback extends Component {
 	}	*/	
 		
 	countTotalFeedback = () => {
-	 total =  1+ this.state.good + this.state.neutral + this.state.bad;
+	 total = 1 + this.state.good + this.state.neutral + this.state.bad ;
 	}	
 	
 	countPositiveFeedbackPercentage= () => {

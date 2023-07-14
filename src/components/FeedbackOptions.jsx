@@ -6,7 +6,7 @@ const FeedbackOptions = ({ options, handleChange }) => {
         {options.map((option) => (
             <li key = {option}>
             <button
-            className={css.checkinput}            
+            className={css.checkBtn}            
             name={option}
             type="button"
             onClick={()=>handleChange(option)}
